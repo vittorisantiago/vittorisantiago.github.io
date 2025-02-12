@@ -1,34 +1,29 @@
-# Portfolio
-Developed with passion while listening to _Hurry Up Tomorrow by The Weeknd_. Completed in just 3 days.
-![OscarHernandez-portfolio](https://github.com/user-attachments/assets/e284a42b-15c5-495c-99c7-ad5c1eb3bbe7)
-[![Deploy Status](https://img.shields.io/badge/Deploy-Vercel-black?style=flat&logo=vercel)](tu-url-deploy)  
+## Portfolio
+
+[![Deploy Status](https://img.shields.io/badge/Deploy-Vercel-black?style=flat&logo=vercel)](https://vittorisantiago.github.io)
+
+**Demo:** [https://vittorisantiago.github.io](https://vittorisantiago.github.io)
 
 ---
-Demo: https://oscarhernandez.vercel.app/
 
-## **Stack**  
-### **Frontend**  
+### **Tecnologías utilizadas**
+
+### **Frontend**
+
 ![Astro](https://img.shields.io/badge/Astro-FF5D01?logo=astro&logoColor=white)
 ![Tailwind](https://img.shields.io/badge/Tailwind_CSS-38B2AC?logo=tailwind-css&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)
 
-### **Tools**  
+### **Herramientas**
+
 ![Figma](https://img.shields.io/badge/Figma-F24E1E?logo=figma&logoColor=white)
 ![Prettier](https://img.shields.io/badge/Prettier-F7B93E?logo=prettier&logoColor=black)
 ![Canva](https://img.shields.io/badge/Canva-c900c3?logo=canva&logoColor=white)
 
-### **Show your favorite Spotify album (or your own)** ![Spotify](https://img.shields.io/badge/Spotify-06cc1a?logo=spotify&logoColor=white)
-1. Choose your Spotify album
-2. Access the share options
-3. Select 'copy embed code'
-```
-<iframe src="https://open.spotify.com/embed/album/ALBUM_ID" style="border-radius:12px border:0;" class="w-full h-40" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
-```
-4. Insert the embed code on footer.astro
+---
 
-That's it!
+### **Estructura del proyecto**
 
-## **Project structure**
 ```
 public/
 └── svg/
@@ -39,16 +34,34 @@ src/
 └── pages/
 ```
 
-## **Local configuration** 
-1. Clone the repo:  
+### **Configuración local**
+
+1. Clona el repositorio:
+
 ```
-git clone https://github.com/gothsec/portfolio
+git clone https://github.com/vittorisantiago/vittorisantiago.githuib.io
 ```
-2. Install dependencies:
-```  
+
+2. Instala las dependencias:
+
+```
 npm install
 ```
-3. Start the develpoment server:
-```  
+
+3. Inicia el servidor de desarrollo:
+
+```
 npm run dev
 ```
+
+### **Sobre el proyecto**
+
+Este portfolio fue creado como una muestra de mi trabajo y habilidades en desarrollo web. Utilicé Astro para la construcción del sitio, Tailwind CSS para los estilos y TypeScript para añadir tipado estático.
+
+Las herramientas como Figma y Canva me ayudaron a diseñar la interfaz, mientras que Prettier aseguró un código limpio y bien formateado.
+
+### Despliegue
+
+El sitio está desplegado en GitHub Pages y puedes visitarlo en https://vittorisantiago.github.io.
+
+¡Gracias por visitar mi portfolio! Si tienes alguna pregunta o comentario, no dudes en contactarme. 😉
