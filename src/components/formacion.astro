@@ -1,0 +1,153 @@
+<section id="formacion" class="py-12 border-t border-[#ffffff10] text-[var(--white)]">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-lg text-[var(--sec)] mb-2 shiny-sec">Mi formación</h2>
+      <h3 class="text-4xl md:text-5xl font-medium mb-8">Certificados</h3>
+  
+      <div class="relative flex justify-center items-center">
+        <!-- Flecha izquierda -->
+        <button 
+          id="left-arrow"
+          class="absolute left-0 bg-[#1a1a1a] text-white p-3 rounded-full shadow-lg hover:bg-[#333] focus:outline-none z-10 translate-x-[-50%]">
+          <span class="material-symbols-outlined">navigate_before</span>
+        </button>
+  
+        <!-- Contenedor de certificados -->
+        <div id="cert-container" class="flex justify-center items-center w-full">
+          <div id="cert" class="bg-[#1a1a1a] p-6 rounded-xl shadow-lg border border-[#ffffff10] w-[350px] md:w-[400px] h-[400px] flex flex-col items-center">
+            <h4 id="cert-title" class="text-2xl font-semibold mb-2">Workshop Ciberseguridad</h4>
+            <p id="cert-issuer" class="text-sm text-gray-400 mb-1">Ekoparty</p>
+            <p id="cert-date" class="text-sm text-gray-500">Noviembre 2021</p>
+  
+            <!-- Imagen del certificado -->
+            <div class="relative w-full h-full mt-4 overflow-hidden">
+              <img 
+                id="cert-image" 
+                src="/certificados/ekoparty.jpg" 
+                alt="Workshop ciberseguridad" 
+                class="object-cover w-full h-full rounded-lg cursor-pointer"
+              />
+            </div>
+          </div>
+        </div>
+  
+        <!-- Flecha derecha -->
+        <button 
+          id="right-arrow"
+          class="absolute right-0 bg-[#1a1a1a] text-white p-3 rounded-full shadow-lg hover:bg-[#333] focus:outline-none z-10 translate-x-[50%]">
+          <span class="material-symbols-outlined">navigate_next</span>
+        </button>
+      </div>
+  
+      <!-- Indicadores de puntitos -->
+      <div class="flex justify-center space-x-2 mt-4">
+        <span class="dot w-2 h-2 bg-gray-400 rounded-full"></span>
+        <span class="dot w-2 h-2 bg-gray-400 rounded-full"></span>
+      </div>
+    </div>
+  </section>
+  
+  <style>
+    /* Ajuste para el contenedor de certificados */
+    #cert-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    }
+
+    /* Estilos de las flechas */
+    #left-arrow,
+    #right-arrow {
+    background: none;  /* Elimina el fondo */
+    padding: 0;
+    border: none;
+    box-shadow: none;
+    font-size: 2rem; /* Aumenta el tamaño del ícono */
+    color: white;
+    cursor: pointer;
+    transition: color 0.3s;
+    }
+
+    #left-arrow:hover,
+    #right-arrow:hover {
+    color: #ccc; /* Cambia el color al pasar el mouse */
+    }
+
+    @media (max-width: 768px) {
+    #cert-container {
+        justify-content: center;
+    }
+
+    #cert {
+        width: 90%;
+        max-width: 300px;
+        height: 380px;
+    }
+
+    #left-arrow,
+    #right-arrow {
+        transform: translateY(-50%);
+    }
+    }
+  </style>
+    
+  <script>
+    const certificates = [
+  { title: "Workshop Ciberseguridad", issuer: "Ekoparty", date: "Noviembre 2021", image: "/certificados/ekoparty.jpg" },
+  { title: "Herramienta Git", issuer: "Educación IT", date: "Septiembre 2020", image: "/certificados/git.jpg" },
+  { title: "Programación en Python", issuer: "Educación IT", date: "Septiembre 2020", image: "/certificados/python.jpg" },
+  { title: "Bases de Datos con MongoDB", issuer: "Educación IT", date: "Octubre 2020", image: "/certificados/mongodb.jpg" },
+  { title: "Desarrollo Web con HTML5", issuer: "Educación IT", date: "Septiembre 2020", image: "/certificados/html5.jpg" },
+  { title: "Maquetado Avanzado con CSS3", issuer: "Educación IT", date: "Octubre 2020", image: "/certificados/maq_avanzado.jpg" },
+    ];
+
+    let currentIndex = 0;
+
+    const leftArrow = document.getElementById("left-arrow");
+    const rightArrow = document.getElementById("right-arrow");
+    const certTitle = document.getElementById("cert-title");
+    const certIssuer = document.getElementById("cert-issuer");
+    const certDate = document.getElementById("cert-date");
+    const certImage = document.getElementById("cert-image") as HTMLImageElement;
+    const dotsContainer = document.querySelector(".flex.space-x-2");
+
+    // **Generar los puntitos dinámicamente**
+    dotsContainer.innerHTML = certificates
+    .map(() => `<span class="dot w-2 h-2 bg-gray-400 rounded-full"></span>`)
+    .join("");
+    const dots = document.querySelectorAll(".dot");
+
+    // **Actualizar certificado en pantalla**
+    function updateCertificate(index) {
+    const cert = certificates[index];
+    certTitle.textContent = cert.title;
+    certIssuer.textContent = cert.issuer;
+    certDate.textContent = cert.date;
+    certImage.src = cert.image;
+
+    // **Actualizar los puntitos**
+    dots.forEach((dot, i) => {
+        dot.classList.toggle("bg-gray-400", i !== index);
+        dot.classList.toggle("bg-white", i === index);
+    });
+    }
+
+    // **Abrir la imagen en una nueva pestaña**
+    certImage.addEventListener("click", () => {
+    window.open(certImage.src, "_blank");
+    });
+
+    leftArrow.addEventListener("click", () => {
+    currentIndex = (currentIndex - 1 + certificates.length) % certificates.length;
+    updateCertificate(currentIndex);
+    });
+
+    rightArrow.addEventListener("click", () => {
+    currentIndex = (currentIndex + 1) % certificates.length;
+    updateCertificate(currentIndex);
+    });
+
+    // **Inicializar el primer certificado**
+    updateCertificate(currentIndex);
+    
+</script>
