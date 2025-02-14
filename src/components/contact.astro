@@ -1,4 +1,4 @@
-<section id="contacto" class="w-full py-12 border-t border-[#ffffff10]">
+<section id="contact" class="w-full py-12 border-t border-[#ffffff10]">
   <div class="max-w-5xl mx-auto">
     <h2 class="text-lg text-[var(--sec)] mb-2 shiny-sec">Hablemos</h2>
     <h3 class="text-4xl md:text-5xl font-medium text-[var(--white)] mb-6">Contacto</h3>
@@ -17,7 +17,7 @@
       </div>
       
       <div>
-        <form id="formulario-contacto" action="https://formsubmit.co/vittori513@gmail.com" method="POST" class="flex flex-col gap-4">
+        <form id="formulario-contacto" action="https://formsubmit.co/74ee5fb19657e0906c7a9885fd307ff8" method="POST" class="flex flex-col gap-4">
           <input
             type="text"
             name="nombre"
@@ -41,10 +41,17 @@
           ></textarea>
           
           <button
+            id="submit-button"
             type="submit"
-            class="px-4 py-2 bg-[var(--white-icon-tr)] text-[var(--white)] rounded-lg opacity-60 transition-opacity border border-[var(--white-icon-tr)] hover:opacity-100 hover:bg-[var(--white-icon-tr)]"
+            class="px-4 py-2 bg-[var(--white-icon-tr)] text-[var(--white)] rounded-lg opacity-60 transition-opacity border border-[var(--white-icon-tr)] hover:opacity-100 hover:bg-[var(--white-icon-tr)] relative"
           >
-            Enviar
+            <div id="button-content" class="flex justify-center items-center w-full h-full">
+              <span id="button-text">Enviar</span>
+              <div
+                id="loading-spinner"
+                class="hidden spinner-border animate-spin border-t-4 border-b-4 border-[var(--white)] w-5 h-5 rounded-full ml-2"
+              ></div>
+            </div>
           </button>
         </form>
         
@@ -59,9 +66,17 @@
 <script>
   document.getElementById('formulario-contacto').addEventListener('submit', async function(event) {
     event.preventDefault();
-    const form = event.target;
+    const form = event.target as HTMLFormElement;
+    const submitButton = document.getElementById('submit-button') as HTMLButtonElement;
+    const buttonText = document.getElementById('button-text');
+    const loadingSpinner = document.getElementById('loading-spinner');
     const formData = new FormData(form);
-    
+
+    // Deshabilitar el botón y mostrar el spinner
+    submitButton.disabled = true;
+    buttonText.style.display = 'none';  // Ocultar texto del botón
+    loadingSpinner.classList.remove('hidden');  // Mostrar spinner
+
     try {
       const response = await fetch(form.action, {
         method: "POST",
@@ -79,6 +94,17 @@
     } catch (error) {
       console.error('Error:', error);
       alert('Hubo un problema al enviar el mensaje.');
+    } finally {
+      // Volver a habilitar el botón y ocultar el spinner después de procesar
+      submitButton.disabled = false;
+      buttonText.style.display = 'inline';  // Mostrar texto del botón
+      loadingSpinner.classList.add('hidden');  // Ocultar spinner
     }
   });
 </script>
+
+<style>
+  .spinner-border {
+    border-top-color: transparent;
+  }
+</style>
