@@ -1,19 +1,19 @@
 import React, { useState } from "react";
 
 const CategoryIcons = {
-  "Desarrollo Web": (
+  Frontend: (
     <span className="material-symbols-outlined text-[var(--sec)] opacity-70">
-      code
+      web
     </span>
   ),
-  Automatización: (
+  Backend: (
     <span className="material-symbols-outlined text-[var(--sec)] opacity-70">
-      bolt
+      database
     </span>
   ),
-  "Inteligencia Artificial": (
+  "Análisis de Sistemas": (
     <span className="material-symbols-outlined text-[var(--sec)] opacity-70">
-      smart_toy
+      analytics
     </span>
   ),
 };
@@ -22,18 +22,21 @@ const SkillsList = () => {
   const [openItem, setOpenItem] = useState<string | null>(null);
 
   const skills = {
-    "Desarrollo Web": [
-      "Aplicaciones web de una sola página (SPAs)",
-      "Sitios web empresariales y landing pages",
-      "Páginas de portafolios",
+    Frontend: [
+      "Interfaces interactivas con HTML, CSS y JavaScript",
+      "Diseño de páginas responsivas y modernas",
+      "Exploración de frameworks como React",
     ],
-    Automatización: [
-      "Automatización de tareas con Python",
-      "Integración de aplicaciones con APIs",
+    Backend: [
+      "Lógica de servidor con Python y Node.js",
+      "Gestión básica de bases de datos (SQL)",
+      "Conexión entre frontend y backend",
     ],
-    "Inteligencia Artificial": [
-      "Chatbots y asistentes virtuales",
-      "Generación de contenido con IA",
+    "Análisis de Sistemas": [
+      "Diseño de soluciones a problemas técnicos",
+      "Metodologías ágiles y de desarrollo",
+      "Modelado de procesos y requisitos",
+      "Resolución de problemas con enfoque lógico",
     ],
   };
 
