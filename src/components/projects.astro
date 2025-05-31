@@ -3,6 +3,7 @@ import { Image } from "astro:assets";
 import biosys from "../../public/biosys.png";
 import boggle from "../../public/boggle.png";
 import patriAR from "../../public/patriAR.png";
+import beefvalue from "../../public/beefvalue.png";
 
 interface Project {
   title: string;
@@ -13,6 +14,13 @@ interface Project {
 }
 
 const projects: Project[] = [
+  {
+    title: "BeefValue",
+    image: beefvalue as ImageMetadata,
+    link: "https://github.com/vittorisantiago/beefvalue",
+    preview: "#",
+    status: "En Desarrollo",
+  },
   {
     title: "Boggle",
     image: boggle as ImageMetadata,
