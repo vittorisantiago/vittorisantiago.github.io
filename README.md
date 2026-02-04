@@ -1,46 +1,24 @@
-# Astro Starter Kit: Basics
+# ✦ Portfolio 2026 | Santiago Vittori
 
-```sh
-npm create astro@latest -- --template basics
-```
+> "Ingeniería, diseño y precisión. Creando interfaces que la gente disfruta usar."
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+![Astro](https://img.shields.io/badge/astro-%232C205F.svg?style=for-the-badge&logo=astro&logoColor=white)
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Framer Motion](https://img.shields.io/badge/Framer_Motion-black?style=for-the-badge&logo=framer&logoColor=blue)
 
-## 🚀 Project Structure
+## ⚡ Sobre el Proyecto
 
-Inside of your Astro project, you'll see the following folders and files:
+Este repositorio contiene el código fuente de mi portfolio personal versión 2026. Diseñado con un enfoque minimalista y de alto rendimiento ("Apple-esque"), priorizando la experiencia de usuario, las micro-interacciones fluidas y la optimización de recursos.
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
-```
+Construido sobre **Astro** para asegurar tiempos de carga casi instantáneos, utilizando **React** únicamente en las "islas" de interactividad necesaria.
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+### 🛠️ Tech Stack & Herramientas
 
-## 🧞 Commands
+* **Core:** [Astro 5.0](https://astro.build) (Arquitectura de Islas)
+* **Estilos:** [Tailwind CSS](https://tailwindcss.com) + Diseño de Sistema Personalizado
+* **Interactividad:** [React](https://react.dev)
+* **Animaciones:** [Framer Motion](https://www.framer.com/motion/)
+* **Iconografía:** [Lucide React](https://lucide.dev)
+* **Tipografía:** Inter (Google Fonts)
 
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
