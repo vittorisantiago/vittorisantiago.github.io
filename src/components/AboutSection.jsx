@@ -99,7 +99,7 @@ export default function AboutSection() {
               <div className="absolute -inset-10 rounded-full bg-cyan-500/10 blur-3xl" />
               <div className="relative h-64 w-64 sm:h-72 sm:w-72 rounded-full border border-white/15 bg-gradient-to-br from-white/10 via-white/5 to-transparent shadow-2xl shadow-black/40 overflow-hidden">
                 <img
-                  src="/src/assets/trajedia liviana.png"
+                  src="../assets/trajedia liviana.png"
                   alt="Santiago Vittori"
                   className="h-full w-full object-cover"
                   loading="lazy"
