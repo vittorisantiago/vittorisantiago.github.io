@@ -6,7 +6,7 @@ const projects = [
     title: "Mueblería Jota — Ecommerce",
     description:
       "Tienda online para una mueblería con catálogo destacado y experiencia de compra clara.",
-    image: "/public/project-muebleria-jota.png",
+    image: "/project-muebleria-jota.png",
     tags: ["Ecommerce", "React", "UI/UX"],
     link: "https://github.com/vittorisantiago/muebleria-jota-fullstack",
     details: [
