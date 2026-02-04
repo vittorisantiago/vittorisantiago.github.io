@@ -11,6 +11,7 @@ export default defineConfig({
   },
 
   site: "https://vittorisantiago.github.io",
+  base: "/portfolio-2026",
 
   integrations: [react()],
 });
