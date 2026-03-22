@@ -1,12 +1,12 @@
 import { motion } from "framer-motion";
 import { Sparkles, Code2, Zap, Layers } from "lucide-react";
 
-// Tarjetas
+// Tarjetas actualizadas para reflejar el perfil híbrido
 const highlights = [
-  { title: "Arquitectura Sólida", icon: Code2 },
-  { title: "Experiencia de Usuario", icon: Sparkles },
-  { title: "Adaptabilidad", icon: Zap },
-  { title: "Visión Integral", icon: Layers },
+  { title: "Desarrollo de Software", icon: Code2 },
+  { title: "Gestión de Datos", icon: Layers },
+  { title: "Automatización e IA", icon: Zap },
+  { title: "Visión Analítica", icon: Sparkles },
 ];
 
 export default function AboutSection() {
@@ -43,7 +43,7 @@ export default function AboutSection() {
               >
                 Ingeniería de software con{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">
-                  visión de producto.
+                  visión de valor real.
                 </span>
               </motion.h2>
 
@@ -54,11 +54,11 @@ export default function AboutSection() {
                 transition={{ duration: 0.5, delay: 0.2 }}
                 className="text-sm sm:text-base md:text-lg text-neutral-400 leading-relaxed max-w-2xl"
               >
-                Más que escribir código, construyo soluciones. Combino
-                pensamiento analítico con una ejecución práctica para crear
-                productos digitales que aportan valor real. Me caracterizo por
-                la curiosidad técnica y la capacidad de resolver desafíos
-                complejos con un enfoque simple y efectivo.
+                Más que escribir código, construyo soluciones eficientes.
+                Combino desarrollo de software, gestión de datos y herramientas
+                de inteligencia artificial para transformar problemas complejos
+                en resultados tangibles. Me caracterizo por el pensamiento
+                analítico, la curiosidad técnica y una ejecución práctica.
               </motion.p>
             </div>
 
