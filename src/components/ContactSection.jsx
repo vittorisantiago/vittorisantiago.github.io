@@ -49,15 +49,16 @@ export default function ContactSection() {
           className="group relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 p-8 shadow-2xl md:col-span-2 lg:col-span-2 flex flex-col justify-between"
         >
           {/* Efecto de fondo */}
-          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_100%_0%,rgba(56,189,248,0.1),transparent_50%)]" />
+          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_100%_0%,rgba(220,38,38,0.1),transparent_50%)]" />
 
           <div className="relative z-10 space-y-4">
             <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-white text-balance">
-              ¿Creamos algo <span className="text-cyan-400">único</span> juntos?
+              ¿Buscás sumar talento a tu{" "}
+              <span className="text-red-400">equipo de seguridad</span>?
             </h2>
             <p className="text-neutral-400 text-lg max-w-md leading-relaxed">
-              Estoy disponible para nuevos proyectos. Si buscas código limpio y
-              diseño con impacto, hablemos.
+              Estoy en búsqueda activa de nuevos desafíos en Ciberseguridad.
+              Hablemos.
             </p>
           </div>
 
@@ -103,7 +104,7 @@ export default function ContactSection() {
               <span className="block text-xs font-medium text-neutral-500 uppercase tracking-wider">
                 Perfil
               </span>
-              <span className="text-lg font-semibold text-white group-hover:text-blue-300 transition-colors">
+              <span className="text-lg font-semibold text-white group-hover:text-white transition-colors">
                 LinkedIn
               </span>
             </div>
@@ -119,17 +120,17 @@ export default function ContactSection() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="group flex flex-1 items-center justify-between rounded-[2rem] border border-white/10 bg-[#0a0a0a] p-6 transition-all hover:border-white/20 hover:bg-white/5"
+            className="group flex flex-1 items-center justify-between rounded-[2rem] border border-white/10 bg-[#0a0a0a] p-6 transition-all hover:border-red-500/30 hover:bg-red-500/10"
           >
             <div>
               <span className="block text-xs font-medium text-neutral-500 uppercase tracking-wider">
                 Código
               </span>
-              <span className="text-lg font-semibold text-white group-hover:text-violet-300 transition-colors">
+              <span className="text-lg font-semibold text-white group-hover:text-red-300 transition-colors">
                 GitHub
               </span>
             </div>
-            <Github className="h-6 w-6 text-neutral-600 group-hover:text-white transition-colors" />
+            <Github className="h-6 w-6 text-neutral-600 group-hover:text-red-400 transition-colors" />
           </motion.a>
 
           {/* WhatsApp */}
@@ -141,17 +142,17 @@ export default function ContactSection() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.3 }}
-            className="group flex flex-1 items-center justify-between rounded-[2rem] border border-white/10 bg-[#0a0a0a] p-6 transition-all hover:border-green-500/30 hover:bg-green-500/10"
+            className="group flex flex-1 items-center justify-between rounded-[2rem] border border-white/10 bg-[#0a0a0a] p-6 transition-all hover:border-orange-500/30 hover:bg-orange-500/10"
           >
             <div>
               <span className="block text-xs font-medium text-neutral-500 uppercase tracking-wider">
                 Chat Rápido
               </span>
-              <span className="text-lg font-semibold text-white group-hover:text-green-400 transition-colors">
+              <span className="text-lg font-semibold text-white group-hover:text-orange-400 transition-colors">
                 WhatsApp
               </span>
             </div>
-            <MessageCircle className="h-6 w-6 text-neutral-600 group-hover:text-green-400 transition-colors" />
+            <MessageCircle className="h-6 w-6 text-neutral-600 group-hover:text-orange-400 transition-colors" />
           </motion.a>
         </div>
       </div>
