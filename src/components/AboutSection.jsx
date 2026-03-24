@@ -1,12 +1,12 @@
 import { motion } from "framer-motion";
-import { Sparkles, Code2, Zap, Layers } from "lucide-react";
+import { Sparkles, Lock, Zap, Shield } from "lucide-react";
 
-// Tarjetas actualizadas para reflejar el perfil híbrido
+// Tarjetas enfocadas en ciberseguridad
 const highlights = [
-  { title: "Desarrollo de Software", icon: Code2 },
-  { title: "Gestión de Datos", icon: Layers },
-  { title: "Automatización e IA", icon: Zap },
-  { title: "Visión Analítica", icon: Sparkles },
+  { title: "Pentesting & Auditorías", icon: Lock },
+  { title: "Análisis de Vulnerabilidades", icon: Shield },
+  { title: "Automatización de Seguridad", icon: Zap },
+  { title: "Estrategia Defensiva", icon: Sparkles },
 ];
 
 export default function AboutSection() {
@@ -17,7 +17,7 @@ export default function AboutSection() {
     >
       <div className="relative overflow-hidden rounded-2xl md:rounded-3xl border border-white/10 bg-white/5 p-6 sm:p-8 md:p-12 shadow-2xl shadow-black/40">
         {/* Fondo sutil */}
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_20%_-10%,rgba(56,189,248,0.1),transparent_60%),radial-gradient(ellipse_80%_80%_at_80%_10%,rgba(139,92,246,0.1),transparent_60%)]" />
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_20%_-10%,rgba(220,38,38,0.1),transparent_60%),radial-gradient(ellipse_80%_80%_at_80%_10%,rgba(239,68,68,0.1),transparent_60%)]" />
 
         <div className="relative grid gap-8 md:gap-10 lg:gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
           {/* Columna de Texto */}
@@ -27,7 +27,7 @@ export default function AboutSection() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="inline-flex w-fit items-center gap-2 rounded-full border border-cyan-500/20 bg-cyan-500/10 px-4 py-1.5 text-[11px] font-semibold tracking-wide text-cyan-300 sm:text-xs"
+              className="inline-flex w-fit items-center gap-2 rounded-full border border-red-500/30 bg-red-500/10 px-4 py-1.5 text-[11px] font-semibold tracking-wide text-red-300 sm:text-xs"
             >
               <Sparkles className="h-3.5 w-3.5" />
               Sobre mí
@@ -41,9 +41,9 @@ export default function AboutSection() {
                 transition={{ duration: 0.5, delay: 0.1 }}
                 className="text-2xl leading-tight sm:text-3xl md:text-5xl font-bold tracking-tight text-white text-balance"
               >
-                Ingeniería de software con{" "}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">
-                  visión de valor real.
+                Pensando como atacante para{" "}
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-orange-400">
+                  defender como ingeniero.
                 </span>
               </motion.h2>
 
@@ -54,11 +54,13 @@ export default function AboutSection() {
                 transition={{ duration: 0.5, delay: 0.2 }}
                 className="text-sm sm:text-base md:text-lg text-neutral-400 leading-relaxed max-w-2xl"
               >
-                Más que escribir código, construyo soluciones eficientes.
-                Combino desarrollo de software, gestión de datos y herramientas
-                de inteligencia artificial para transformar problemas complejos
-                en resultados tangibles. Me caracterizo por el pensamiento
-                analítico, la curiosidad técnica y una ejecución práctica.
+                Especializado en auditorías de seguridad, análisis de
+                vulnerabilidades y pentesting ofensivo. Al contar con
+                experiencia en desarrollo de software, comprendo la arquitectura
+                de las aplicaciones desde su código base. Utilizo metodologías
+                OWASP Top 10, scripting en Python para automatización y técnicas
+                avanzadas de penetración para identificar y mitigar riesgos
+                antes de que lo haga un atacante.
               </motion.p>
             </div>
 
@@ -73,10 +75,10 @@ export default function AboutSection() {
                   transition={{ duration: 0.4, delay: 0.1 + 0.05 * index }}
                   className="group flex items-center gap-4 rounded-2xl border border-white/5 bg-white/5 p-4 sm:p-5 transition-colors hover:bg-white/10 hover:border-white/10"
                 >
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-white/15 to-transparent text-cyan-200 group-hover:text-cyan-100 transition-colors">
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-white/15 to-transparent text-red-300 group-hover:text-red-200 transition-colors">
                     <item.icon className="h-6 w-6" />
                   </div>
-                  <h3 className="text-base sm:text-lg font-semibold text-white group-hover:text-cyan-50 transition-colors">
+                  <h3 className="text-base sm:text-lg font-semibold text-white group-hover:text-red-100 transition-colors">
                     {item.title}
                   </h3>
                 </motion.div>
@@ -87,7 +89,7 @@ export default function AboutSection() {
           {/* Columna de Imagen */}
           <div className="relative flex items-center justify-center">
             <div className="relative group">
-              <div className="absolute -inset-1 rounded-full bg-gradient-to-tr from-cyan-500/20 to-violet-500/20 blur-2xl opacity-60 group-hover:opacity-100 transition-opacity duration-700" />
+              <div className="absolute -inset-1 rounded-full bg-gradient-to-tr from-red-500/20 to-orange-500/20 blur-2xl opacity-60 group-hover:opacity-100 transition-opacity duration-700" />
 
               <div className="relative h-56 w-56 sm:h-64 sm:w-64 md:h-72 md:w-72 lg:h-80 lg:w-80 rounded-full border border-white/10 bg-[#0a0a0a] shadow-2xl overflow-hidden ring-1 ring-white/5">
                 <img
