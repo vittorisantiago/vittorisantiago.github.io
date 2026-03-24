@@ -75,7 +75,7 @@ export default function Navbar() {
 
               {/* Efecto de brillo inferior al hacer hover */}
               <span
-                className={`absolute inset-x-0 -bottom-px mx-auto h-px w-1/2 bg-gradient-to-r from-transparent via-blue-500/50 to-transparent transition-opacity ${
+                className={`absolute inset-x-0 -bottom-px mx-auto h-px w-1/2 bg-gradient-to-r from-transparent via-red-500/50 to-transparent transition-opacity ${
                   isActive ? "opacity-100" : "opacity-0 group-hover:opacity-100"
                 }`}
               />
