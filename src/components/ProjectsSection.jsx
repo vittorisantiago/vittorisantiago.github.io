@@ -48,10 +48,10 @@ export default function ProjectsSection() {
           initial={{ opacity: 0, x: -10 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          className="inline-flex items-center gap-2 rounded-full border border-violet-500/20 bg-violet-500/10 px-3 py-1 text-xs font-medium text-violet-300 w-fit"
+          className="inline-flex items-center gap-2 rounded-full border border-red-500/30 bg-red-500/10 px-3 py-1 text-xs font-medium text-red-300 w-fit"
         >
           <LayoutGrid className="h-3.5 w-3.5" />
-          Trabajo seleccionado
+          Proyectos destacados
         </motion.div>
 
         <motion.h2
@@ -61,8 +61,8 @@ export default function ProjectsSection() {
           className="text-3xl md:text-5xl font-bold tracking-tight text-white"
         >
           Proyectos con{" "}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-fuchsia-400">
-            identidad propia.
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-orange-400">
+            impacto técnico.
           </span>
         </motion.h2>
 
@@ -98,13 +98,13 @@ export default function ProjectsSection() {
           <div className="relative flex flex-1 flex-col justify-between p-6 md:p-8 bg-gradient-to-b from-[#111] to-[#0a0a0a]">
             <div className="space-y-4">
               <div className="flex items-center justify-between">
-                <span className="text-xs font-medium text-violet-400 uppercase tracking-wider">
+                <span className="text-xs font-medium text-red-400 uppercase tracking-wider">
                   {featured.category}
                 </span>
                 <Github className="h-5 w-5 text-neutral-500 transition-colors group-hover:text-white" />
               </div>
 
-              <h3 className="text-2xl md:text-3xl font-bold text-white group-hover:text-violet-200 transition-colors">
+              <h3 className="text-2xl md:text-3xl font-bold text-white group-hover:text-red-200 transition-colors">
                 {featured.title}
               </h3>
 
@@ -166,7 +166,7 @@ export default function ProjectsSection() {
               <div className="flex flex-1 flex-col justify-between p-6">
                 <div className="space-y-3">
                   <div className="flex justify-between items-start">
-                    <h3 className="text-xl font-bold text-white group-hover:text-violet-200 transition-colors">
+                    <h3 className="text-xl font-bold text-white group-hover:text-red-200 transition-colors">
                       {project.title}
                     </h3>
                     <ArrowUpRight className="h-5 w-5 text-neutral-600 group-hover:text-white transition-colors" />
