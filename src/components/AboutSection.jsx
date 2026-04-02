@@ -1,12 +1,12 @@
 import { motion } from "framer-motion";
-import { Sparkles, Lock, Zap, Shield } from "lucide-react";
+import { Sparkles, Lock, Target, Zap } from "lucide-react";
 
 // Tarjetas enfocadas en ciberseguridad
 const highlights = [
-  { title: "Pentesting & Auditorías", icon: Lock },
-  { title: "Análisis de Vulnerabilidades", icon: Shield },
-  { title: "Automatización de Seguridad", icon: Zap },
-  { title: "Estrategia Defensiva", icon: Sparkles },
+  { title: "Web Pentesting", icon: Lock },
+  { title: "Análisis AppSec", icon: Target },
+  { title: "Automatización Python", icon: Zap },
+  { title: "OWASP Top 10", icon: Sparkles },
 ];
 
 export default function AboutSection() {
@@ -15,9 +15,9 @@ export default function AboutSection() {
       id="about"
       className="relative w-full max-w-6xl mx-auto mt-24 mb-16 scroll-mt-32 px-4 sm:px-6"
     >
-      <div className="relative overflow-hidden rounded-2xl md:rounded-3xl border border-white/10 bg-white/5 p-6 sm:p-8 md:p-12 shadow-2xl shadow-black/40">
-        {/* Fondo sutil */}
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_20%_-10%,rgba(220,38,38,0.1),transparent_60%),radial-gradient(ellipse_80%_80%_at_80%_10%,rgba(239,68,68,0.1),transparent_60%)]" />
+      <div className="relative overflow-hidden rounded-2xl md:rounded-3xl border border-cyan-500/20 bg-white/5 p-6 sm:p-8 md:p-12 shadow-2xl shadow-black/40 backdrop-blur">
+        {/* Fondo sutil con acentos cyan */}
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_20%_-10%,rgba(0,217,255,0.1),transparent_60%),radial-gradient(ellipse_80%_80%_at_80%_10%,rgba(255,107,53,0.08),transparent_60%)]" />
 
         <div className="relative grid gap-8 md:gap-10 lg:gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
           {/* Columna de Texto */}
@@ -27,7 +27,7 @@ export default function AboutSection() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="inline-flex w-fit items-center gap-2 rounded-full border border-red-500/30 bg-red-500/10 px-4 py-1.5 text-[11px] font-semibold tracking-wide text-red-300 sm:text-xs"
+              className="inline-flex w-fit items-center gap-2 rounded-full border border-cyan-500/30 bg-cyan-500/10 px-4 py-1.5 text-[11px] font-semibold tracking-wide text-cyan-300 sm:text-xs"
             >
               <Sparkles className="h-3.5 w-3.5" />
               Sobre mí
@@ -41,10 +41,8 @@ export default function AboutSection() {
                 transition={{ duration: 0.5, delay: 0.1 }}
                 className="text-2xl leading-tight sm:text-3xl md:text-5xl font-bold tracking-tight text-white text-balance"
               >
-                Pensando como atacante para{" "}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-orange-400">
-                  defender como ingeniero.
-                </span>
+                Ethical Hacker y Red Team{" "}
+                <span className="gradient-text">especializado en AppSec.</span>
               </motion.h2>
 
               <motion.p
@@ -54,13 +52,22 @@ export default function AboutSection() {
                 transition={{ duration: 0.5, delay: 0.2 }}
                 className="text-sm sm:text-base md:text-lg text-neutral-400 leading-relaxed max-w-2xl"
               >
-                Especializado en auditorías de seguridad, análisis de
-                vulnerabilidades y pentesting ofensivo. Al contar con
-                experiencia en desarrollo de software, comprendo la arquitectura
-                de las aplicaciones desde su código base. Utilizo metodologías
-                OWASP Top 10, scripting en Python para automatización y técnicas
-                avanzadas de penetración para identificar y mitigar riesgos
-                antes de que lo haga un atacante.
+                Ingeniero en Sistemas con background en desarrollo. Ahora me
+                especializo en ciberseguridad ofensiva: auditorías, pentesting
+                web y análisis de vulnerabilidades. Entiendo las aplicaciones
+                desde adentro, lo que me permite detectar fallos donde otros no
+                los ven.
+              </motion.p>
+
+              <motion.p
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                className="text-sm sm:text-base text-neutral-500 leading-relaxed max-w-2xl"
+              >
+                Creo herramientas en Python, trabajo con Linux, y aprendo
+                constantemente en laboratorios controlados.
               </motion.p>
             </div>
 
@@ -73,12 +80,12 @@ export default function AboutSection() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: 0.1 + 0.05 * index }}
-                  className="group flex items-center gap-4 rounded-2xl border border-white/5 bg-white/5 p-4 sm:p-5 transition-colors hover:bg-white/10 hover:border-white/10"
+                  className="group flex items-center gap-4 rounded-2xl border border-white/5 bg-white/5 p-4 sm:p-5 transition-all hover:bg-cyan-500/5 hover:border-cyan-500/20 hover:shadow-lg hover:shadow-cyan-500/10"
                 >
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-white/15 to-transparent text-red-300 group-hover:text-red-200 transition-colors">
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-cyan-500/20 to-transparent text-cyan-300 group-hover:text-cyan-200 transition-colors">
                     <item.icon className="h-6 w-6" />
                   </div>
-                  <h3 className="text-base sm:text-lg font-semibold text-white group-hover:text-red-100 transition-colors">
+                  <h3 className="text-base sm:text-lg font-semibold text-white group-hover:text-cyan-200 transition-colors">
                     {item.title}
                   </h3>
                 </motion.div>
@@ -89,9 +96,9 @@ export default function AboutSection() {
           {/* Columna de Imagen */}
           <div className="relative flex items-center justify-center">
             <div className="relative group">
-              <div className="absolute -inset-1 rounded-full bg-gradient-to-tr from-red-500/20 to-orange-500/20 blur-2xl opacity-60 group-hover:opacity-100 transition-opacity duration-700" />
+              <div className="absolute -inset-1 rounded-full bg-gradient-to-tr from-cyan-500/20 to-orange-500/20 blur-2xl opacity-60 group-hover:opacity-100 transition-opacity duration-700" />
 
-              <div className="relative h-56 w-56 sm:h-64 sm:w-64 md:h-72 md:w-72 lg:h-80 lg:w-80 rounded-full border border-white/10 bg-[#0a0a0a] shadow-2xl overflow-hidden ring-1 ring-white/5">
+              <div className="relative h-56 w-56 sm:h-64 sm:w-64 md:h-72 md:w-72 lg:h-80 lg:w-80 rounded-full border border-cyan-500/30 bg-[#0f0f1e] shadow-2xl overflow-hidden ring-1 ring-cyan-500/10">
                 <img
                   src="/personal nueva liviana.jpg"
                   alt="Santiago Vittori"
@@ -99,7 +106,7 @@ export default function AboutSection() {
                   loading="lazy"
                 />
 
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
               </div>
             </div>
           </div>
