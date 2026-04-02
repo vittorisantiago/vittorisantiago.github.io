@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { Home, User, Briefcase, FileText, Mail } from "lucide-react";
+import { Home, User, Code, Award, Mail } from "lucide-react";
 
 const navItems = [
   { name: "Inicio", href: "#home", icon: Home },
   { name: "Sobre mí", href: "#about", icon: User },
-  { name: "Proyectos", href: "#projects", icon: Briefcase },
+  { name: "Stack", href: "#skills", icon: Code },
+  { name: "Certificados", href: "#certificates", icon: Award },
   { name: "Contacto", href: "#contact", icon: Mail },
-  // { name: "CV", href: "/cv-santiago.pdf", icon: FileText },
 ];
 
 export default function Navbar() {
@@ -53,7 +53,7 @@ export default function Navbar() {
       transition={{ duration: 0.8, ease: "easeOut" }}
       className="fixed top-0 left-0 right-0 z-50 flex justify-center pt-6 px-4"
     >
-      <div className="flex items-center gap-1 p-1.5 rounded-full border border-white/10 bg-white/5 backdrop-blur-md shadow-lg shadow-black/20 ring-1 ring-white/5">
+      <div className="flex items-center gap-1 p-1.5 rounded-full border border-cyan-500/20 bg-white/5 backdrop-blur-md shadow-lg shadow-black/20 ring-1 ring-white/5">
         {navItems.map((item) => {
           const isActive = activeId === item.href.replace("#", "");
 
@@ -63,7 +63,7 @@ export default function Navbar() {
               href={item.href}
               className={`relative flex items-center gap-2 px-4 py-2 text-sm font-medium transition-colors group rounded-full hover:bg-white/5 ${
                 isActive
-                  ? "text-white bg-white/10"
+                  ? "text-cyan-400 bg-cyan-500/10"
                   : "text-neutral-400 hover:text-white"
               }`}
               aria-label={item.name}
@@ -73,9 +73,9 @@ export default function Navbar() {
               <item.icon className="w-4 h-4 transition-transform group-hover:scale-110" />
               <span className="hidden sm:block">{item.name}</span>
 
-              {/* Efecto de brillo inferior al hacer hover */}
+              {/* Efecto de brillo inferior */}
               <span
-                className={`absolute inset-x-0 -bottom-px mx-auto h-px w-1/2 bg-gradient-to-r from-transparent via-red-500/50 to-transparent transition-opacity ${
+                className={`absolute inset-x-0 -bottom-px mx-auto h-px w-1/2 bg-gradient-to-r from-transparent via-cyan-400/50 to-transparent transition-opacity ${
                   isActive ? "opacity-100" : "opacity-0 group-hover:opacity-100"
                 }`}
               />
