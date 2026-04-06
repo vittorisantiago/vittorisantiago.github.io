@@ -1,13 +1,5 @@
 import { motion } from "framer-motion";
-import { Sparkles, Lock, Target, Zap } from "lucide-react";
-
-// Tarjetas enfocadas en ciberseguridad
-const highlights = [
-  { title: "Web Pentesting", icon: Lock },
-  { title: "Análisis AppSec", icon: Target },
-  { title: "Automatización Python", icon: Zap },
-  { title: "OWASP Top 10", icon: Sparkles },
-];
+import { Sparkles } from "lucide-react";
 
 export default function AboutSection() {
   return (
@@ -41,8 +33,8 @@ export default function AboutSection() {
                 transition={{ duration: 0.5, delay: 0.1 }}
                 className="text-2xl leading-tight sm:text-3xl md:text-5xl font-bold tracking-tight text-white text-balance"
               >
-                Ethical Hacker y Red Team{" "}
-                <span className="gradient-text">especializado en AppSec.</span>
+                Ingeniero en Sistemas orientado a{" "}
+                <span className="gradient-text">Ciberseguridad.</span>
               </motion.h2>
 
               <motion.p
@@ -52,44 +44,14 @@ export default function AboutSection() {
                 transition={{ duration: 0.5, delay: 0.2 }}
                 className="text-sm sm:text-base md:text-lg text-neutral-400 leading-relaxed max-w-2xl"
               >
-                Ingeniero en Sistemas con background en desarrollo. Ahora me
-                especializo en ciberseguridad ofensiva: auditorías, pentesting
-                web y análisis de vulnerabilidades. Entiendo las aplicaciones
-                desde adentro, lo que me permite detectar fallos donde otros no
-                los ven.
+                Ingeniero en Sistemas con experiencia en desarrollo web,
+                orientando mi perfil hacia la Ciberseguridad. Utilizo entornos
+                Linux y desarrollo scripts en Python para automatizar procesos.
+                Actualmente me encuentro en constante aprendizaje sobre
+                metodologías de pentesting y busco una primera oportunidad en el
+                área para sumar experiencia, trabajar en equipo y seguir
+                aprendiendo.
               </motion.p>
-
-              <motion.p
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.3 }}
-                className="text-sm sm:text-base text-neutral-500 leading-relaxed max-w-2xl"
-              >
-                Creo herramientas en Python, trabajo con Linux, y aprendo
-                constantemente en laboratorios controlados.
-              </motion.p>
-            </div>
-
-            {/* Grid de Tarjetas */}
-            <div className="grid gap-3 sm:gap-4 sm:grid-cols-2 pt-2">
-              {highlights.map((item, index) => (
-                <motion.div
-                  key={item.title}
-                  initial={{ opacity: 0, y: 10 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: 0.1 + 0.05 * index }}
-                  className="group flex items-center gap-4 rounded-2xl border border-white/5 bg-white/5 p-4 sm:p-5 transition-all hover:bg-cyan-500/5 hover:border-cyan-500/20 hover:shadow-lg hover:shadow-cyan-500/10"
-                >
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-cyan-500/20 to-transparent text-cyan-300 group-hover:text-cyan-200 transition-colors">
-                    <item.icon className="h-6 w-6" />
-                  </div>
-                  <h3 className="text-base sm:text-lg font-semibold text-white group-hover:text-cyan-200 transition-colors">
-                    {item.title}
-                  </h3>
-                </motion.div>
-              ))}
             </div>
           </div>
 
