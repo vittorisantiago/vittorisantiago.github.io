@@ -1,73 +1,74 @@
 import { motion } from "framer-motion";
-import { Code2, Terminal, Shield, Zap, ExternalLink } from "lucide-react";
+import { Code2, Terminal, ExternalLink } from "lucide-react";
 
-const skillCategories = [
+const mainSkills = [
   {
-    title: "Lenguajes de Programación",
-    icon: Code2,
-    skills: ["Python", "Bash", "JavaScript", "TypeScript", "SQL"],
+    name: "Python",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
   },
   {
-    title: "Herramientas de Seguridad",
-    icon: Shield,
-    skills: ["Burp Suite", "Caido", "Nmap", "Metasploit", "Wireshark"],
+    name: "Bash",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg",
   },
   {
-    title: "Sistemas & Infraestructura",
-    icon: Terminal,
-    skills: [
-      "Linux (Arch, Kali)",
-      "Docker",
-      "Git",
-      "Bash Scripting",
-      "Networking",
-    ],
+    name: "Linux",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg",
   },
   {
-    title: "Metodologías",
-    icon: Zap,
-    skills: [
-      "OWASP Top 10",
-      "Web Pentesting",
-      "AppSec",
-      "Red Team",
-      "Threat Modeling",
-    ],
+    name: "JavaScript",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
   },
+  {
+    name: "Git",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
+  },
+  {
+    name: "Docker",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
+  },
+];
+
+const tools = [
+  { name: "Burp Suite", logo: "https://cdn.simpleicons.org/burpsuite/ff7300" },
+  {
+    name: "Caido",
+    logo: "/caido.png",
+  },
+  { name: "Nmap", logo: "/nmap.png" },
 ];
 
 const learningPlatforms = [
   {
     name: "HackTheBox",
-    emoji: "🔓",
+    logo: "https://cdn.simpleicons.org/hackthebox/9FEF00",
     url: "https://www.hackthebox.com/",
     description: "Máquinas y desafíos de hacking",
     color: "from-cyan-500 to-blue-500",
   },
   {
     name: "TryHackMe",
-    emoji: "🎓",
+    logo: "/tryhackme.png",
     url: "https://tryhackme.com/",
     description: "Cursos y labs interactivos",
     color: "from-orange-500 to-red-500",
   },
   {
     name: "PortSwigger",
-    emoji: "🌐",
+    logo: "https://cdn.simpleicons.org/burpsuite/FF9500",
     url: "https://portswigger.net/",
     description: "Web Security Academy",
     color: "from-purple-500 to-pink-500",
   },
   {
     name: "PentesterLab",
-    emoji: "🛡️",
+    logo: "/pentesterlab.jpeg",
     url: "https://pentesterlab.com/",
     description: "Ejercicios de pentesting",
     color: "from-green-500 to-emerald-500",
   },
   {
     name: "picoCTF",
-    emoji: "🚩",
+    logo: "/picoCTF.jpeg",
     url: "https://picoctf.org/",
     description: "CTF challenges",
     color: "from-yellow-500 to-orange-500",
@@ -89,7 +90,7 @@ export default function SkillsSection() {
           className="inline-flex items-center gap-2 rounded-full border border-cyan-500/30 bg-cyan-500/10 px-3 py-1 text-xs font-medium text-cyan-300 w-fit"
         >
           <Code2 className="h-3.5 w-3.5" />
-          Stack & Herramientas
+          Herramientas
         </motion.div>
 
         <motion.h2
@@ -98,62 +99,72 @@ export default function SkillsSection() {
           viewport={{ once: true }}
           className="text-3xl md:text-5xl font-bold tracking-tight text-white"
         >
-          Tecnologías que manejo con{" "}
-          <span className="gradient-text">confianza.</span>
+          Lo que utilizo en mi <span className="gradient-text">día a día.</span>
         </motion.h2>
 
         <p className="text-base md:text-lg text-neutral-400 max-w-2xl">
-          Un stack enfocado en ciberseguridad ofensiva, pentesting web y
-          desarrollo de herramientas de seguridad.
+          Lenguajes, herramientas y plataformas que uso regularmente en mis
+          proyectos.
         </p>
       </div>
 
-      {/* Grid de Categorías */}
-      <div className="grid gap-6 md:grid-cols-2">
-        {skillCategories.map((category, index) => (
-          <motion.div
-            key={category.title}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: index * 0.1 }}
-            className="group relative overflow-hidden rounded-2xl border border-cyan-500/20 bg-white/5 p-6 md:p-8 hover:border-cyan-500/40 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/10"
-          >
-            {/* Fondo con gradiente sutil */}
-            <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 via-transparent to-orange-500/5 opacity-0 group-hover:opacity-100 transition-opacity" />
+      {/* Skills Grid - Minimalist */}
+      <div className="mb-16">
+        <div className="grid gap-3 grid-cols-2 md:grid-cols-3 lg:grid-cols-6">
+          {mainSkills.map((skill, index) => (
+            <motion.div
+              key={skill.name}
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.3, delay: index * 0.05 }}
+              className="flex flex-col items-center justify-center gap-2 px-4 py-4 rounded-lg border border-cyan-500/20 bg-white/5 hover:bg-cyan-500/10 hover:border-cyan-500/40 transition-all group cursor-default"
+            >
+              <img
+                src={skill.logo}
+                alt={skill.name}
+                className="h-8 w-8 group-hover:scale-110 transition-transform"
+              />
+              <span className="text-xs font-medium text-white/80 group-hover:text-cyan-300 transition-colors text-center">
+                {skill.name}
+              </span>
+            </motion.div>
+          ))}
+        </div>
+      </div>
 
-            {/* Contenido */}
-            <div className="relative z-10">
-              {/* Icono + Título */}
-              <div className="flex items-center gap-3 mb-6">
-                <div className="p-2.5 rounded-lg bg-cyan-500/20 text-cyan-300 group-hover:bg-cyan-500/30 transition-colors">
-                  <category.icon className="h-6 w-6" />
-                </div>
-                <h3 className="text-lg md:text-xl font-semibold text-white">
-                  {category.title}
-                </h3>
-              </div>
-
-              {/* Skills Tags */}
-              <div className="flex flex-wrap gap-2">
-                {category.skills.map((skill) => (
-                  <motion.span
-                    key={skill}
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true }}
-                    className="px-3 py-1.5 rounded-full text-xs font-medium bg-white/10 text-cyan-200 border border-cyan-500/20 group-hover:bg-cyan-500/20 group-hover:border-cyan-500/40 transition-all"
-                  >
-                    {skill}
-                  </motion.span>
-                ))}
-              </div>
-            </div>
-
-            {/* Decoración de esquina */}
-            <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-cyan-500/10 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
-          </motion.div>
-        ))}
+      {/* Tools Section */}
+      <div className="mb-16">
+        <motion.h3
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-lg font-semibold text-white/70 mb-4 flex items-center gap-2"
+        >
+          <Terminal className="h-5 w-5 text-cyan-300" />
+          Herramientas
+        </motion.h3>
+        <div className="grid gap-3 grid-cols-2 md:grid-cols-3 lg:grid-cols-3">
+          {tools.map((tool, index) => (
+            <motion.div
+              key={tool.name}
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.3, delay: index * 0.05 }}
+              className="flex flex-col items-center justify-center gap-2 px-4 py-4 rounded-lg border border-cyan-500/20 bg-white/5 hover:bg-cyan-500/10 hover:border-cyan-500/40 transition-all group cursor-default"
+            >
+              <img
+                src={tool.logo}
+                alt={tool.name}
+                className="h-8 w-8 group-hover:scale-110 transition-transform"
+              />
+              <span className="text-xs font-medium text-white/80 group-hover:text-cyan-300 transition-colors text-center">
+                {tool.name}
+              </span>
+            </motion.div>
+          ))}
+        </div>
       </div>
 
       {/* Plataformas de Aprendizaje */}
@@ -187,7 +198,11 @@ export default function SkillsSection() {
 
               {/* Contenido */}
               <div className="relative z-10 flex flex-col items-center text-center space-y-3">
-                <div className="text-4xl">{platform.emoji}</div>
+                <img
+                  src={platform.logo}
+                  alt={platform.name}
+                  className="h-10 w-10 group-hover:scale-110 transition-transform"
+                />
                 <div>
                   <h4 className="font-semibold text-white group-hover:text-cyan-200 transition-colors">
                     {platform.name}
@@ -207,20 +222,6 @@ export default function SkillsSection() {
           ))}
         </div>
       </div>
-
-      {/* Nota adicional */}
-      <motion.div
-        initial={{ opacity: 0, y: 10 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        className="mt-16 p-6 rounded-2xl border border-cyan-500/20 bg-cyan-500/5 text-neutral-300 text-center"
-      >
-        <p className="text-sm md:text-base">
-          Aprendizaje continuo en laboratorios de seguridad. Siempre
-          actualizando conocimientos en nuevas vulnerabilidades y técnicas de{" "}
-          <strong>offensive security</strong>.
-        </p>
-      </motion.div>
     </section>
   );
 }
