@@ -53,12 +53,10 @@ export default function ContactSection() {
 
           <div className="relative z-10 space-y-4">
             <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-white text-balance">
-              ¿Interesado en un{" "}
-              <span className="text-cyan-300">Security Engineer</span>?
+              <span className="text-cyan-300">Hablemos...</span>
             </h2>
             <p className="text-neutral-400 text-lg max-w-md leading-relaxed">
-              Abierto a nuevos desafíos en ciberseguridad ofensiva, red teaming
-              y penetration testing. Hablemos.
+              Abierto a nuevos desafíos y oportunidades!
             </p>
           </div>
 
