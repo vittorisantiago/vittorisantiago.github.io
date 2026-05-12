@@ -33,8 +33,8 @@ export default function AboutSection() {
                 transition={{ duration: 0.5, delay: 0.1 }}
                 className="text-2xl leading-tight sm:text-3xl md:text-5xl font-bold tracking-tight text-white text-balance"
               >
-                Ingeniero en Sistemas orientado a{" "}
-                <span className="gradient-text">Ciberseguridad.</span>
+                Fullstack Developer que construye{" "}
+                <span className="gradient-text">productos reales.</span>
               </motion.h2>
 
               <motion.p
@@ -44,13 +44,12 @@ export default function AboutSection() {
                 transition={{ duration: 0.5, delay: 0.2 }}
                 className="text-sm sm:text-base md:text-lg text-neutral-400 leading-relaxed max-w-2xl"
               >
-                Ingeniero en Sistemas con experiencia en desarrollo web,
-                orientando mi perfil hacia la Ciberseguridad. Utilizo entornos
-                Linux y desarrollo scripts en Python para automatizar procesos.
-                Actualmente me encuentro en constante aprendizaje sobre
-                metodologías de pentesting y busco una primera oportunidad en el
-                área para sumar experiencia, trabajar en equipo y seguir
-                aprendiendo.
+                Soy Ingeniero en Sistemas enfocado en desarrollar aplicaciones
+                que resuelven problemas concretos. Trabajo de forma
+                independiente cubriendo todo el ciclo: diseño, frontend, backend
+                y base de datos. Integro herramientas de inteligencia artificial
+                tanto en el proceso de desarrollo como dentro de los productos
+                que construyo.
               </motion.p>
             </div>
           </div>
